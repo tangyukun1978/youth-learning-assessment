@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>青少年儿童学习模式评估 | Youth Learning Profile Assessment</title>
+<meta property="og:title" content="青少年儿童学习模式评估">
+<meta property="og:description" content="帮助家长识别孩子的认知模式和学习偏好，做出更有针对性的教育决策。10-15分钟完成评估。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tangyukun1978.github.io/youth-learning-assessment/">
+<meta name="description" content="青少年儿童学习模式评估工具，帮助家长通过系统化观察识别孩子的认知模式和学习偏好。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue","Microsoft YaHei",sans-serif;background:#f5f6fa;color:#1a1a2e;line-height:1.6;min-height:100vh}
+.c{max-width:480px;margin:0 auto;padding:16px}
+.pg{display:none}.pg.on{display:block}
+.hd{text-align:center;padding:36px 0 20px}
+.hd h1{font-size:24px;font-weight:800;margin-bottom:2px}
+.hd .e{font-size:14px;color:#7f8c8d;font-weight:400;margin-bottom:8px}
+.hd .s{font-size:13px;color:#999}
+.desc{font-size:14px;color:#555;line-height:1.8;margin-bottom:16px}
+.desc .e{font-size:12px;color:#999;display:block;margin-top:2px}
+.bx{background:#fff;border-radius:14px;padding:16px 20px;margin-bottom:16px;box-shadow:0 2px 12px rgba(0,0,0,.06)}
+.pt{font-size:14px;color:#444;line-height:1.9}.pt .e{font-size:12px;color:#aaa}
+.th h3{font-size:15px;color:#333;margin-bottom:10px}
+.ti{display:flex;align-items:flex-start;gap:10px;margin-bottom:8px}
+.tg{background:#2980B9;color:#fff;border-radius:6px;padding:2px 10px;white-space:nowrap;font-weight:700;font-size:11px;flex-shrink:0;margin-top:2px}
+.ts{font-size:12px;color:#888;line-height:1.5}
+.au{text-align:center;font-size:12px;color:#bbb;margin-top:12px;padding-bottom:8px}
+.bp{width:100%;padding:14px;font-size:16px;font-weight:700;color:#fff;background:linear-gradient(135deg,#2980B9,#3498DB);border:none;border-radius:12px;cursor:pointer;margin-top:12px}
+.bp:active{transform:scale(.98)}
+.pb{height:6px;background:#e8e8e8;border-radius:3px;overflow:hidden;margin-bottom:6px}
+.pf{height:100%;background:linear-gradient(90deg,#2980B9,#27AE60);border-radius:3px;transition:width .4s}
+.p2{font-size:12px;color:#999;text-align:right;margin-bottom:10px}
+.tabs{display:flex;gap:5px;margin-bottom:18px}
+.tab{flex:1;padding:7px 2px;font-size:10px;border:none;border-radius:8px;cursor:pointer;font-weight:500;background:#e8ecf1;color:#888;text-align:center}
+.tab.on{background:#2980B9;color:#fff;font-weight:700}
+.tab.ok{background:#27AE60;color:#fff}
+.dt{font-size:19px;font-weight:800;margin-bottom:2px}.dt .e{font-size:13px;font-weight:400;color:#888;display:block}
+.ds{font-size:13px;color:#666;margin-bottom:2px}.ds .e{font-size:11px;color:#aaa;display:block}
+.dy{font-size:11px;color:#bbb;font-style:italic;margin-bottom:18px}
+.sh{background:#fff;border-radius:12px;padding:12px 16px;margin-bottom:12px;box-shadow:0 1px 6px rgba(0,0,0,.04)}
+.sn{font-size:14px;font-weight:700;color:#333;margin-bottom:2px}.sn .e{font-size:11px;font-weight:400;color:#999}
+.sd{font-size:12px;color:#888;line-height:1.5;margin-top:4px}.sd .e{font-size:11px;color:#aaa;display:block;margin-top:2px}
+.qc{background:#fff;border-radius:12px;padding:12px 14px;margin-bottom:10px;box-shadow:0 1px 6px rgba(0,0,0,.04);border:1.5px solid transparent}
+.qc.dn{border-color:rgba(39,174,96,.25)}
+.qt{font-size:13px;color:#333;line-height:1.6;margin-bottom:4px}.qt .e{font-size:11px;color:#999;display:block;margin-top:2px}
+.or{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+.ob{flex:1;min-width:60px;padding:9px 6px;font-size:13px;font-weight:600;border:1.5px solid #e0e0e0;border-radius:10px;cursor:pointer;background:#fafafa;color:#555;text-align:center;line-height:1.3}
+.ob:active{transform:scale(.97)}
+.ob.sl{background:#2980B9;border-color:#2980B9;color:#fff}
+.ob.us{background:#95a5a6;border-color:#95a5a6;color:#fff}
+.nr{display:flex;gap:10px;margin-top:18px;padding-bottom:16px}
+.nb{flex:1;padding:12px;font-size:14px;font-weight:600;border:none;border-radius:10px;cursor:pointer}
+.nb:active{transform:scale(.98)}
+.np{background:#fff;color:#555;border:1.5px solid #ddd}
+.nn{background:#2980B9;color:#fff}
+.nn:disabled,.nf:disabled{background:#ccc;color:#fff}
+.nf{background:#27AE60;color:#fff}
+.rh{text-align:center;padding:20px 0 16px}
+.rh h1{font-size:22px;font-weight:800}.rh .e{font-size:13px;color:#888;font-weight:400}
+.rh p{font-size:13px;color:#999;margin-top:4px}
+.rg{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:20px}
+.rc{background:#fff;border-radius:12px;padding:14px;border-left:4px solid;box-shadow:0 2px 6px rgba(0,0,0,.05)}
+.rc .dl{font-size:11px;color:#999;margin-bottom:2px}
+.rc .tl{font-size:17px;font-weight:800}
+.rc .tl .e{font-size:11px;font-weight:400;display:block;color:#888}
+.rd{background:#fff;border-radius:14px;padding:16px 18px;margin-bottom:12px;box-shadow:0 2px 6px rgba(0,0,0,.05)}
+.dh{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.dg{border-radius:6px;padding:2px 8px;font-size:11px;font-weight:700;color:#fff}
+.dp{font-size:15px;font-weight:700}
+.dp .e{font-size:11px;font-weight:400;display:inline;color:#888;margin-left:6px}
+.dd{font-size:13px;color:#555;line-height:1.6;margin-bottom:10px}
+.dd .e{font-size:11px;color:#999;display:block;margin-top:2px}
+.st{font-size:12px;font-weight:700;color:#333;margin-bottom:6px}
+.si{font-size:12px;color:#555;line-height:1.8;padding-left:14px;position:relative}
+.si::before{content:"\B7";position:absolute;left:2px;color:#2980B9;font-weight:700}
+.si .e{font-size:11px;color:#999;display:block}
+.act-box{background:#EBF5FB;border-radius:10px;padding:12px 14px;margin-top:10px;margin-bottom:4px}
+.act-title{font-size:12px;font-weight:700;color:#1A5276;margin-bottom:6px}
+.act-yes{font-size:12px;color:#1A5276;line-height:1.8;padding-left:24px;position:relative;margin-bottom:2px}
+.act-yes .icon{position:absolute;left:0;top:0}
+.act-yes .e{font-size:11px;color:#5B8FA8;display:block}
+.act-no{font-size:12px;color:#922B21;line-height:1.8;padding-left:24px;position:relative;margin-bottom:2px}
+.act-no .icon{position:absolute;left:0;top:0}
+.act-no .e{font-size:11px;color:#C0746B;display:block}
+.combo-box{background:#F0E6FF;border-radius:10px;padding:12px 14px;margin-bottom:16px;border-left:3px solid #8E44AD}
+.combo-title{font-size:12px;font-weight:700;color:#6C3483;margin-bottom:6px}
+.combo-text{font-size:12px;color:#6C3483;line-height:1.7}
+.combo-text .e{font-size:11px;color:#9B7DB8;display:block;margin-top:2px}
+.wb{background:#FFF9E6;border-radius:12px;padding:14px 18px;margin-bottom:16px;border-left:4px solid #F39C12}
+.wt{font-size:13px;font-weight:700;color:#E67E22;margin-bottom:6px}
+.wi{font-size:12px;color:#666;line-height:1.8}
+.ra{display:flex;gap:10px;margin-bottom:8px}
+.bo{flex:1;padding:11px;font-size:13px;font-weight:600;border:1.5px solid #ddd;border-radius:10px;cursor:pointer;background:#fff;color:#555;text-align:center}
+.bo:active{transform:scale(.98)}
+.share-btn{width:100%;padding:13px;font-size:15px;font-weight:700;color:#fff;background:linear-gradient(135deg,#07C160,#06AD56);border:none;border-radius:12px;cursor:pointer;margin-bottom:8px}
+.share-btn:active{transform:scale(.98)}
+.copy-btn{width:100%;padding:11px;font-size:13px;font-weight:600;color:#2980B9;background:#fff;border:1.5px solid #2980B9;border-radius:10px;cursor:pointer;margin-bottom:8px}
+.copy-btn:active{transform:scale(.98)}
+.sc{background:linear-gradient(135deg,#1a1a2e,#16213e);border-radius:16px;padding:24px 20px;margin-bottom:16px;color:#fff;position:relative;overflow:hidden}
+.sc::before{content:"";position:absolute;top:-40px;right:-40px;width:120px;height:120px;background:rgba(41,128,185,.2);border-radius:50%}
+.sc::after{content:"";position:absolute;bottom:-30px;left:-30px;width:100px;height:100px;background:rgba(39,174,96,.15);border-radius:50%}
+.sc-t{font-size:18px;font-weight:800;position:relative;z-index:1}
+.sc-s{font-size:11px;color:rgba(255,255,255,.5);margin-bottom:16px;position:relative;z-index:1}
+.sc-g{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:16px;position:relative;z-index:1}
+.sc-i{background:rgba(255,255,255,.1);border-radius:10px;padding:10px 12px}
+.sc-l{font-size:10px;color:rgba(255,255,255,.5)}
+.sc-v{font-size:15px;font-weight:700;margin-top:2px}
+.sc-f{font-size:10px;color:rgba(255,255,255,.35);text-align:center;position:relative;z-index:1}
+.sc-a{font-size:10px;color:rgba(255,255,255,.3);text-align:center;margin-top:4px;position:relative;z-index:1}
+.qr-box{background:#fff;border-radius:14px;padding:20px;margin-bottom:16px;text-align:center;box-shadow:0 2px 12px rgba(0,0,0,.06)}
+.qr-box h3{font-size:15px;font-weight:700;color:#333;margin-bottom:4px}
+.qr-box .qr-sub{font-size:12px;color:#999;margin-bottom:12px}
+.qr-box img{width:180px;height:180px;border-radius:8px;border:1px solid #eee}
+.qr-box .qr-tip{font-size:11px;color:#aaa;margin-top:10px;line-height:1.6}
+.qr-res{display:flex;justify-content:center;position:relative;z-index:1;margin-bottom:12px}
+.qr-res img{width:100px;height:100px;border-radius:8px;border:2px solid rgba(255,255,255,.2)}
+.share-guide{background:#E8F8F0;border-radius:12px;padding:14px 18px;margin-bottom:16px;border-left:4px solid #07C160}
+.share-guide .sg-title{font-size:13px;font-weight:700;color:#07C160;margin-bottom:8px}
+.share-guide .sg-step{font-size:12px;color:#555;line-height:2;padding-left:4px}
+.toast{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:rgba(0,0,0,.75);color:#fff;padding:12px 24px;border-radius:10px;font-size:14px;z-index:999;display:none}
+.toast.v{display:block;animation:fo 2s ease .5s forwards}
+@keyframes fo{to{opacity:0}}
+</style>
+</head>
+<body>
+<div class="c" id="app">
+<div class="pg on" id="p0">
+  <div class="hd"><h1>青少年儿童学习模式评估</h1><div class="e">Youth Learning Profile Assessment</div><div class="s">5 - 17 岁 | Ages 5-17</div></div>
+  <div class="desc">本工具帮助家长通过系统化观察，识别孩子的认知模式和学习偏好，从而做出更有针对性的教育决策。<span class="e">This tool helps parents identify their child's cognitive patterns and learning preferences through systematic observation.</span></div>
+  <div class="bx">
+    <div class="pt">📋 适用年龄：5 - 17 岁 <span class="e">Ages 5-17</span></div>
+    <div class="pt">⏱ 约 10 - 15 分钟 <span class="e">~10-15 minutes</span></div>
+    <div class="pt">👁 请基于长期观察作答 <span class="e">Base answers on long-term observation</span></div>
+    <div class="pt">✅ 没有好坏之分，只有不同模式 <span class="e">No good/bad results, only different patterns</span></div>
+  </div>
+  <div class="th">
+    <h3>理论基础 Theoretical Foundation</h3>
+    <div class="ti"><span class="tg">驱动</span><span class="ts">Deci &amp; Ryan Self-Determination Theory (1985)</span></div>
+    <div class="ti"><span class="tg">抗压</span><span class="ts">Lazarus &amp; Folkman (1984) + Dweck Mindset (2006)</span></div>
+    <div class="ti"><span class="tg">信息</span><span class="ts">Kolb Experiential Learning (1984) + Fleming VARK (1992)</span></div>
+    <div class="ti"><span class="tg">社交</span><span class="ts">Big Five Extraversion + Vygotsky ZPD</span></div>
+  </div>
+  <button class="bp" id="go">开始评估 Start</button>
+  <div class="qr-box" id="qr-home">
+    <h3>分享给朋友</h3>
+    <div class="qr-sub">微信扫一扫，让更多家长受益</div>
+    <img id="qr-img-home" alt="QR Code">
+    <div class="qr-tip">长按识别二维码 或 截图发朋友圈</div>
+  </div>
+  <button class="copy-btn" id="copy-link">📋 复制链接发给朋友</button>
+  <div class="au">by 经常摸鱼的阿汤哥</div>
+</div>
+<div class="pg" id="p1"></div>
+<div class="pg" id="p2"></div>
+</div>
+<div class="toast" id="tt"></div>
+<script>
+(function(){
+var PAGE_URL="https://tangyukun1978.github.io/youth-learning-assessment/";
+var QR_API="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data="+encodeURIComponent(PAGE_URL);
+
+// Set QR code on home page
+document.getElementById("qr-img-home").src=QR_API;
+
+// Copy link button
+document.getElementById("copy-link").addEventListener("click",function(){
+  if(navigator.clipboard&&navigator.clipboard.writeText){
+    navigator.clipboard.writeText(PAGE_URL).then(function(){toast("链接已复制，可以粘贴发送给朋友")}).catch(function(){fallbackCopy()})
+  }else{fallbackCopy()}
+});
+function fallbackCopy(){
+  var t=document.createElement("textarea");t.value=PAGE_URL;t.style.position="fixed";t.style.left="-9999px";document.body.appendChild(t);t.select();
+  try{document.execCommand("copy");toast("链接已复制，可以粘贴发送给朋友")}catch(e){toast("请手动复制: "+PAGE_URL)}
+  document.body.removeChild(t)
+}
+
+var D=[
+{id:"drive",zh:"驱动方式",en:"Drive Mode",szh:"孩子是自己能找到方向，还是需要外部结构才能启动？",sen:"Self-directed or needs external structure?",thy:"Deci & Ryan SDT (1985)",
+sc:[{zh:"场景 A：自由时间",en:"Free Time",dzh:"观察孩子在没有安排时的自然状态。",den:"Observe the child during unstructured time.",qs:[
+{id:"d1",zh:"无人要求时，是否会主动找事做（看书、画画、拼装、编程等）？",en:"Proactively finds things to do without being asked?",t:"yn",w:{i:1,e:0}},
+{id:"d2",zh:"自发活动是否有持续性（超过30分钟）而不是频繁切换？",en:"Self-initiated activities last over 30 min?",t:"yn",w:{i:1,e:0}},
+{id:"d3",zh:"是否曾自己主动学过新技能（无人要求）？",en:"Ever self-taught a new skill unprompted?",t:"yn",w:{i:1,e:0}}]},
+{zh:"场景 B：任务启动",en:"Task Start",dzh:"给孩子完全自由的时间，观察反应。",den:"Give total freedom and observe response.",qs:[
+{id:"d4",zh:"面对自由时间，能否快速找到方向并开始行动？",en:"Quickly finds direction when given free time?",t:"yn",w:{i:1,e:0}},
+{id:"d5",zh:"是否倾向于先问\u201c我应该做什么\u201d或等待指令？",en:"Tends to ask what to do or wait for instructions?",t:"yn",w:{i:0,e:1}},
+{id:"d6",zh:"是否曾自己规划过活动步骤？",en:"Ever planned activity steps independently?",t:"yn",w:{i:1,e:0}}]},
+{zh:"场景 C：屏幕时间观察",en:"Screen Time",dzh:"不要停在\u201c玩手机\u201d表面，观察具体内容。",den:"Look beyond 'using phone' at specific content.",qs:[
+{id:"d7",zh:"屏幕活动是否有明确主题或偏好？",en:"Screen activities show clear theme or preference?",t:"yn",w:{i:1,e:0}},
+{id:"d8",zh:"是否曾因屏幕内容而在现实中尝试某事？",en:"Ever tried something IRL inspired by screen content?",t:"yn",w:{i:1,e:0}},
+{id:"d9",zh:"屏幕活动属于哪种类型？",en:"Type of screen activity?",t:"ch",opts:[
+{zh:"主动搜索型",en:"Active searching",w:{i:1,e:0}},
+{zh:"被动接收型",en:"Passive consuming",w:{i:0,e:1}}]}]}],
+ks:["i","e"],
+jg:function(s){var t=s.i+s.e;if(t<1)return"m";var r=s.i/t;return r>=.65?"i":r<=.35?"e":"m"},
+rs:{
+i:{zh:"内部驱动型",en:"Self-Driven",cl:"#27AE60",
+dzh:"孩子能自发找到方向，不需外部推力就能持续学习。",den:"Naturally finds direction; sustains learning without external push.",
+st:[{zh:"提供资源和工具，然后放手",en:"Provide resources, then step back"},{zh:"保护自由探索时间",en:"Protect free exploration time"},{zh:"孩子主动求助时再介入",en:"Only intervene when the child asks"}],
+yes:[{zh:"选择作业量较少、课堂更宽松的学校环境",en:"Choose a school with less homework and a relaxed classroom"},{zh:"提供多样化的学习资源（书籍、在线课程、工具包）供孩子自选",en:"Offer diverse resources (books, online courses, toolkits) for the child to choose"},{zh:"给孩子留出大段不被打断的自由时间",en:"Reserve large blocks of uninterrupted free time"},{zh:"定期引入新的挑战和资源保持刺激",en:"Regularly introduce new challenges and resources"}],
+no:[{zh:"不要给孩子报太多课外培训班",en:"Don\u2019t over-enroll in tutoring or training classes"},{zh:"不要把孩子的日程排满",en:"Don\u2019t fill every time slot in the schedule"},{zh:"不要过度监督学习进度和方向",en:"Don\u2019t micromanage learning pace and direction"},{zh:"不需要家长陪写作业",en:"No need for parents to sit with them during homework"}]},
+e:{zh:"外部驱动型",en:"Structure-Driven",cl:"#2980B9",
+dzh:"孩子需要明确目标和外部反馈才能有效学习。这不是缺点。",den:"Needs clear goals and external feedback. A style, not a weakness.",
+st:[{zh:"建立清晰的学习时间表",en:"Establish a clear study schedule"},{zh:"拆解大任务为小步骤",en:"Break big tasks into small steps"},{zh:"随能力增长逐步扩大自主范围",en:"Gradually expand autonomy as competence grows"}],
+yes:[{zh:"选择作业结构清晰、定期考核的学校",en:"Choose a school with structured homework and regular assessments"},{zh:"家长需要陪伴写作业，提供即时反馈",en:"Parents should accompany homework and give immediate feedback"},{zh:"适当报名课外培训班提供结构化学习",en:"Enroll in structured training classes as needed"},{zh:"用检查清单、进度表帮助孩子看到进展",en:"Use checklists and progress trackers"},{zh:"选择管理较严格的老师",en:"Choose stricter, more structured teachers"}],
+no:[{zh:"不要突然完全放手，需要逐步过渡",en:"Don\u2019t suddenly go hands-off; transition gradually"},{zh:"不要因为孩子需要结构而贴上\u201c懒\u201d的标签",en:"Don\u2019t label the child as lazy for needing structure"}]},
+m:{zh:"混合型",en:"Mixed",cl:"#8E44AD",
+dzh:"某些领域自驱，其他领域需外部支持。最常见的类型。",den:"Self-driven in some areas, needs support in others. Most common.",
+st:[{zh:"识别自驱领域和需要支持的领域",en:"Identify self-driven vs. support-needed domains"},{zh:"用兴趣领域带动弱项",en:"Use interest areas to motivate weaker ones"}],
+yes:[{zh:"在孩子自驱的领域提供资源和自由",en:"Provide resources and freedom in self-driven domains"},{zh:"在需要支持的领域建立轻度结构（而非强压）",en:"Build light structure (not pressure) in areas needing support"},{zh:"观察什么条件能让孩子从被动变主动",en:"Observe what triggers the shift from passive to active"}],
+no:[{zh:"不要用同一套方法对待所有科目",en:"Don\u2019t use the same approach for every subject"}]}}},
+{id:"stress",zh:"抗压模式",en:"Stress Response",szh:"面对困难时是迎上去、绕过去还是退回来？",sen:"Face it, bypass it, or retreat?",thy:"Lazarus & Folkman (1984) + Dweck (2006)",
+sc:[{zh:"场景 A：学业挑战",en:"Academic Challenge",dzh:"回想孩子遇到学业困难时的反应。",den:"Recall reactions to academic difficulty.",qs:[
+{id:"s1",zh:"遇到难题时是否先自己尝试多种方法？",en:"Tries multiple approaches before seeking help?",t:"yn",w:{f:1,a:0,d:0}},
+{id:"s2",zh:"是否把错误视为学习机会而非能力否定？",en:"Views mistakes as learning, not ability judgment?",t:"yn",w:{f:1,a:0,d:0}},
+{id:"s3",zh:"失败后能否较快恢复并继续努力？",en:"Recovers quickly from failure?",t:"yn",w:{f:1,a:0,d:0}}]},
+{zh:"场景 B：非学业挑战",en:"Non-Academic Challenge",dzh:"观察日常面对困难的反应。",den:"Observe responses to everyday difficulties.",qs:[
+{id:"s4",zh:"是否愿尝试不擅长的活动？",en:"Willing to try unfamiliar activities?",t:"yn",w:{f:1,a:0,d:0}},
+{id:"s5",zh:"当别人表现更好时，反应是？",en:"When others do better, the reaction?",t:"ch",opts:[
+{zh:"受激励，想追上",en:"Motivated to catch up",w:{f:1,a:0,d:0}},
+{zh:"垂头丧气，想退出",en:"Discouraged, wants to quit",w:{f:0,a:1,d:0}},
+{zh:"换一个自己更强的领域",en:"Switches to own strength",w:{f:0,a:0,d:1}}]},
+{id:"s6",zh:"能否接受批评而不崩溃？",en:"Handles criticism without meltdown?",t:"yn",w:{f:1,a:0,d:0}}]}],
+ks:["f","a","d"],
+jg:function(s){var t=s.f+s.a+s.d;if(t<1)return"a";if(s.f>=s.a&&s.f>=s.d&&s.f>=t*.45)return"f";if(s.d>s.f&&s.d>=s.a)return"d";return"a"},
+rs:{
+f:{zh:"迎难型",en:"Challenger",cl:"#27AE60",dzh:"默认迎上去，失败后较快恢复。",den:"Defaults to facing difficulty; recovers quickly.",
+st:[{zh:"提供足够难度的挑战",en:"Provide challenging tasks"},{zh:"允许独立解决问题",en:"Allow independent problem-solving"}],
+yes:[{zh:"可以选择课业难度较高的学校或班级",en:"Can choose schools/classes with higher academic rigor"},{zh:"适当引入竞赛环境（学科竞赛、体育比赛）",en:"Introduce competitions (olympiad, sports)"},{zh:"可以选择要求严格的老师",en:"Can choose demanding teachers"},{zh:"允许孩子独立完成作业，家长不需要陪写",en:"Let them do homework independently; parents don\u2019t need to sit with them"}],
+no:[{zh:"不要给太简单的任务，会让孩子无聊",en:"Don\u2019t assign tasks that are too easy"},{zh:"不要过度保护，让孩子经历失败",en:"Don\u2019t be overprotective; let them experience failure"}]},
+a:{zh:"回避型",en:"Avoider",cl:"#E74C3C",dzh:"面对困难默认退缩。与早期挫折耐受力训练不足有关，不是天生缺陷。",den:"Defaults to retreat. Related to early frustration tolerance training, not innate.",
+st:[{zh:"先建立安全感和信任",en:"Build safety and trust first"},{zh:"从极小挑战开始逐步增加难度",en:"Start tiny, gradually increase"},{zh:"强调过程和努力，而非结果",en:"Emphasize effort over results"}],
+yes:[{zh:"选择耐心、鼓励型的老师",en:"Choose patient, encouraging teachers"},{zh:"家长需要更多耐心陪伴，陪写作业时以鼓励为主",en:"Parents need patient companionship; be encouraging during homework"},{zh:"作业量不宜太大，避免引起累积挫败感",en:"Keep homework manageable to prevent accumulated frustration"},{zh:"每次小成功都要明确肯定，帮助积累信心",en:"Explicitly acknowledge every small success"},{zh:"考虑一对一辅导而非大班培训班",en:"Consider one-on-one tutoring over large group classes"}],
+no:[{zh:"绝对不要羞辱、嘲讽或负面比较",en:"Never shame, mock, or make negative comparisons"},{zh:"不要选太严厉的老师或太高压的环境",en:"Don\u2019t choose overly strict teachers or high-pressure environments"},{zh:"不要因孩子放弃而发火，这会强化回避模式",en:"Don\u2019t get angry when the child gives up"}]},
+d:{zh:"绕路型",en:"Detourist",cl:"#F39C12",dzh:"不是不行动，而是绕过困难。很灵活，但需学会直面。",den:"Doesn\u2019t freeze but bypasses difficulty. Flexible but needs to learn direct confrontation.",
+st:[{zh:"肯定其灵活性",en:"Affirm flexibility"},{zh:"帮助区分策略和回避",en:"Help distinguish strategy from avoidance"}],
+yes:[{zh:"设置必须直面解决的任务进行练习",en:"Create tasks requiring direct problem-solving"},{zh:"选择有引导能力的老师，能看穿绕路行为",en:"Choose teachers who can see through workarounds"},{zh:"适当的作业量和考试有助于训练直面能力",en:"Appropriate homework and tests help train confrontation"}],
+no:[{zh:"不要将灵活性完全否定为恶习",en:"Don\u2019t frame flexibility entirely as a bad habit"}]}}},
+{id:"info",zh:"信息处理",en:"Info Processing",szh:"通过什么方式学得最好？",sen:"Which channel for best learning?",thy:"Kolb (1984) + Fleming VARK (1992)",
+sc:[{zh:"场景 A：学习方式",en:"Learning Style",dzh:"回想孩子成功学会新东西的过程。",den:"Recall a successful learning experience.",qs:[
+{id:"i1",zh:"倾向于通过阅读来学习？",en:"Prefers learning by reading?",t:"yn",w:{r:1,v:0,h:0,c:0}},
+{id:"i2",zh:"倾向于看视频或听讲解？",en:"Prefers videos or listening?",t:"yn",w:{r:0,v:1,h:0,c:0}},
+{id:"i3",zh:"倾向于动手尝试（拆装、实验）？",en:"Prefers hands-on experimentation?",t:"yn",w:{r:0,v:0,h:1,c:0}},
+{id:"i4",zh:"倾向于和人讨论来理解？",en:"Prefers discussion with others?",t:"yn",w:{r:0,v:0,h:0,c:1}}]},
+{zh:"场景 B：复习方式",en:"Review Style",dzh:"观察复习时的自然偏好。",den:"Observe natural review habits.",qs:[
+{id:"i5",zh:"复习时是否自发做笔记或图表？",en:"Spontaneously takes notes or draws diagrams?",t:"yn",w:{r:1,v:0,h:0,c:0}},
+{id:"i6",zh:"喜欢把学到的讲给别人听？",en:"Likes explaining to others?",t:"yn",w:{r:0,v:0,h:0,c:1}},
+{id:"i7",zh:"更容易记住亲手做过的事？",en:"Remembers hands-on experiences better?",t:"yn",w:{r:0,v:0,h:1,c:0}}]}],
+ks:["r","v","h","c"],
+jg:function(s){var a=[{k:"r",v:s.r},{k:"v",v:s.v},{k:"h",v:s.h},{k:"c",v:s.c}];a.sort(function(x,y){return y.v-x.v});if(a[0].v<.5)return"x";if(a[0].v===a[1].v)return"x";return a[0].k},
+rs:{
+r:{zh:"阅读/书写型",en:"Reader/Writer",cl:"#2980B9",dzh:"通过阅读和书写学得最好。",den:"Learns best through reading and writing.",
+st:[{zh:"提供丰富阅读材料",en:"Provide rich reading materials"},{zh:"鼓励做笔记和思维导图",en:"Encourage notes and mind maps"}],
+yes:[{zh:"多买书，建立家庭图书角",en:"Buy books, build a reading corner"},{zh:"鼓励用笔记本整理知识",en:"Encourage notebook-based knowledge organization"},{zh:"保护安静的学习环境",en:"Protect a quiet study environment"},{zh:"书写型作业可以多一些，适合这类孩子",en:"More written homework is suitable for this type"}],
+no:[{zh:"不要强迫只用视频学习",en:"Don\u2019t force video-only learning"}]},
+v:{zh:"视听型",en:"Audio-Visual",cl:"#8E44AD",dzh:"通过视频和听讲学得最好。",den:"Learns best through videos and listening.",
+st:[{zh:"利用视频课程",en:"Utilize video courses"},{zh:"鼓励口头表述",en:"Encourage verbal expression"}],
+yes:[{zh:"注册 Khan Academy 等视频学习平台",en:"Sign up for Khan Academy or similar"},{zh:"选择讲课生动的老师",en:"Choose engaging teachers"},{zh:"允许用平板或电脑辅助学习",en:"Allow tablet/computer as learning aids"},{zh:"用讨论和口头复述强化记忆",en:"Use discussion and verbal recap"}],
+no:[{zh:"不要禁止孩子用屏幕学习，这是主要通道",en:"Don\u2019t ban screen-based learning"}]},
+h:{zh:"动手操作型",en:"Hands-On",cl:"#E67E22",dzh:"通过亲手实践学得最好。",den:"Learns best through hands-on practice.",
+st:[{zh:"提供动手机会",en:"Provide hands-on opportunities"},{zh:"用项目制学习",en:"Use project-based learning"}],
+yes:[{zh:"报名实验类、工程类、手工类课外班",en:"Enroll in lab, engineering, maker classes"},{zh:"购买实验套装、编程工具、拼装模型",en:"Buy experiment kits, coding tools, model kits"},{zh:"数学和科学用实物辅助理解",en:"Use physical objects for math and science"},{zh:"允许学习时走动或活动身体",en:"Allow movement during study"}],
+no:[{zh:"不要因为孩子坐不住就认为不专注",en:"Don\u2019t assume fidgeting means lack of focus"},{zh:"不要强迫长时间静坐阅读",en:"Don\u2019t force long still reading sessions"}]},
+c:{zh:"社交讨论型",en:"Social-Discussion",cl:"#27AE60",dzh:"通过交流讨论学得最好。",den:"Learns best through discussion.",
+st:[{zh:"安排学习伙伴",en:"Arrange study partners"},{zh:"用教别人的方式学习",en:"Learn by teaching others"}],
+yes:[{zh:"安排固定的学习伙伴或学习小组",en:"Set up regular study partners or groups"},{zh:"报名小班制课程而非大班",en:"Choose small-class over large lectures"},{zh:"家长可以充当讨论对象，多和孩子聊学习内容",en:"Parents can be discussion partners"}],
+no:[{zh:"不要让孩子完全独自学习",en:"Don\u2019t isolate for solo study only"}]},
+x:{zh:"多通道均衡型",en:"Multi-Channel",cl:"#34495E",dzh:"可通过多种方式有效学习。",den:"Learns effectively through multiple channels.",
+st:[{zh:"让孩子自己选择学习方式",en:"Let the child choose"},{zh:"不同科目用不同通道",en:"Different channels for different subjects"}],
+yes:[{zh:"提供多样化学习工具（书、视频、实验、讨论机会）",en:"Offer diverse tools: books, videos, kits, discussion"},{zh:"鼓励孩子自己实验不同方法",en:"Encourage experimenting with methods"}],
+no:[{zh:"不要固定在单一学习模式上",en:"Don\u2019t lock into a single mode"}]}}},
+{id:"social",zh:"社交需求",en:"Social Needs",szh:"独处时表现最好还是群体中？",sen:"Best alone or in groups?",thy:"Big Five Extraversion + Vygotsky ZPD",
+sc:[{zh:"场景 A：能量来源",en:"Energy Source",dzh:"观察不同社交强度下的精力。",den:"Observe energy at different social intensities.",qs:[
+{id:"o1",zh:"放学后是否需要独处时间恢复精力？",en:"Needs alone time after school?",t:"yn",w:{p:1,s:0}},
+{id:"o2",zh:"和朋友玩很久后是更兴奋还是更累？",en:"After long play with friends \u2014 more energized or tired?",t:"ch",opts:[
+{zh:"更兴奋",en:"More energized",w:{p:0,s:1}},
+{zh:"更累",en:"More tired",w:{p:1,s:0}}]},
+{id:"o3",zh:"更常做哪种选择？",en:"More common choice?",t:"ch",opts:[
+{zh:"主动约朋友",en:"Actively seek friends",w:{p:0,s:1}},
+{zh:"选择一个人待着",en:"Choose to be alone",w:{p:1,s:0}}]}]},
+{zh:"场景 B：学习环境",en:"Study Environment",dzh:"观察不同环境下的学习效率。",den:"Compare efficiency in different environments.",qs:[
+{id:"o4",zh:"写作业时偏好安静环境？",en:"Prefers quiet for homework?",t:"yn",w:{p:1,s:0}},
+{id:"o5",zh:"小组作业表现如何？",en:"Performance in group work?",t:"ch",opts:[
+{zh:"比独立作业更好",en:"Better than solo",w:{p:0,s:1}},
+{zh:"比独立作业更差",en:"Worse than solo",w:{p:1,s:0}},
+{zh:"差不多",en:"About the same",w:{p:0,s:0}}]},
+{id:"o6",zh:"学习时喜欢有人陪伴（即使不交流）？",en:"Likes someone nearby when studying?",t:"yn",w:{p:0,s:1}}]}],
+ks:["p","s"],
+jg:function(s){var t=s.p+s.s;if(t<1)return"b";var r=s.p/t;return r>=.65?"p":r<=.35?"s":"b"},
+rs:{
+p:{zh:"独立型",en:"Independent",cl:"#2980B9",dzh:"独处时效率最高。社交需求低不等于社交能力差。",den:"Most efficient alone. Low social need does not mean low social ability.",
+st:[{zh:"提供安静的学习空间",en:"Provide quiet study space"}],
+yes:[{zh:"给孩子一个独立的学习角落或房间",en:"Give a dedicated study corner or room"},{zh:"允许独立完成作业，不需要家长陪写",en:"Let them do homework alone; no parent-sitting needed"},{zh:"不需要报太多团体活动或社交类课外班",en:"Don\u2019t over-enroll in group activities"},{zh:"尊重孩子独处的需要，这是充电不是孤僻",en:"Respect alone time; it\u2019s recharging, not isolation"}],
+no:[{zh:"不要强迫参加过多社交活动",en:"Don\u2019t force excessive social activities"},{zh:"不要因为孩子不爱社交而担心",en:"Don\u2019t worry just because the child is not sociable"}]},
+s:{zh:"社交型",en:"Social",cl:"#27AE60",dzh:"在群体中获得能量和学习动力。",den:"Gains energy and motivation from group interaction.",
+st:[{zh:"利用社交动力推动学习",en:"Use social motivation to drive learning"}],
+yes:[{zh:"安排固定的学习伙伴",en:"Arrange regular study partners"},{zh:"报名团体活动和团队运动",en:"Enroll in group activities and team sports"},{zh:"允许孩子多和朋友相处",en:"Allow more time with friends"},{zh:"家长可以多陪孩子一起学习和讨论",en:"Parents can study and discuss together with the child"}],
+no:[{zh:"不要让孩子长时间独自学习",en:"Don\u2019t leave the child studying alone for long"},{zh:"注意社交不变成学习干扰",en:"Watch that socializing doesn\u2019t become distraction"}]},
+b:{zh:"均衡型",en:"Balanced",cl:"#8E44AD",dzh:"独处和社交中都能有效运作。",den:"Effective in both solo and social settings.",
+st:[{zh:"保持平衡",en:"Maintain balance"}],
+yes:[{zh:"让孩子自己选择何时独学、何时合作",en:"Let child choose when to study alone vs. together"},{zh:"根据当天精力状态灵活调整",en:"Flexibly adjust based on daily energy levels"}],
+no:[{zh:"不要固定成只独学或只组队",en:"Don\u2019t lock into solo-only or group-only"}]}}}
+];
+
+var A={},cur=0,eM=document.getElementById("p1"),eR=document.getElementById("p2"),eT=document.getElementById("tt");
+function sp(id){var ps=document.querySelectorAll(".pg");for(var i=0;i<ps.length;i++)ps[i].classList.remove("on");document.getElementById(id).classList.add("on");window.scrollTo(0,0)}
+function tq(){var n=0;for(var i=0;i<D.length;i++)for(var j=0;j<D[i].sc.length;j++)n+=D[i].sc[j].qs.length;return n}
+function dd(i){for(var j=0;j<D[i].sc.length;j++)for(var k=0;k<D[i].sc[j].qs.length;k++)if(!A[D[i].sc[j].qs[k].id])return false;return true}
+function ad(){for(var i=0;i<D.length;i++)if(!dd(i))return false;return true}
+function gs(i){var d=D[i],s={};for(var k=0;k<d.ks.length;k++)s[d.ks[k]]=0;for(var j=0;j<d.sc.length;j++)for(var q=0;q<d.sc[j].qs.length;q++){var qu=d.sc[j].qs[q],a=A[qu.id];if(!a)continue;if(a==="unsure"){if(qu.t==="yn")for(var k2=0;k2<d.ks.length;k2++)s[d.ks[k2]]+=(qu.w[d.ks[k2]]||0)*.5}else if(a==="yes"){for(var k2=0;k2<d.ks.length;k2++)s[d.ks[k2]]+=(qu.w[d.ks[k2]]||0)}else if(qu.t==="ch"){for(var oi=0;oi<qu.opts.length;oi++)if(qu.opts[oi].zh===a){for(var k3=0;k3<d.ks.length;k3++)s[d.ks[k3]]+=(qu.opts[oi].w[d.ks[k3]]||0);break}}}return s}
+function E(s){var d=document.createElement("div");d.textContent=s;return d.innerHTML}
+function fq(id){for(var i=0;i<D.length;i++)for(var j=0;j<D[i].sc.length;j++)for(var k=0;k<D[i].sc[j].qs.length;k++)if(D[i].sc[j].qs[k].id===id)return D[i].sc[j].qs[k];return null}
+function toast(m){eT.textContent=m;eT.className="toast v";setTimeout(function(){eT.className="toast"},2500)}
+
+function render(){
+var d=D[cur],t=tq(),an=Object.keys(A).length,pct=Math.round(an/t*100);
+var h='<div class="pb"><div class="pf" style="width:'+pct+'%"></div></div><div class="p2">'+pct+'%</div><div class="tabs">';
+for(var i=0;i<D.length;i++){var c=i===cur?"tab on":dd(i)?"tab ok":"tab";h+='<button class="'+c+'" data-a="tab" data-i="'+i+'">'+(dd(i)&&i!==cur?"\u2713 ":"")+E(D[i].zh)+"</button>"}
+h+='</div><div class="dt">'+E(d.zh)+'<span class="e">'+E(d.en)+'</span></div><div class="ds">'+E(d.szh)+'<span class="e">'+E(d.sen)+'</span></div><div class="dy">'+E(d.thy)+'</div>';
+for(var si=0;si<d.sc.length;si++){var sc=d.sc[si];h+='<div class="sh"><div class="sn">'+E(sc.zh)+' <span class="e">'+E(sc.en)+'</span></div><div class="sd">'+E(sc.dzh)+'<span class="e">'+E(sc.den)+'</span></div></div>';
+for(var qi=0;qi<sc.qs.length;qi++){var q=sc.qs[qi],a=A[q.id];h+='<div class="qc'+(a?" dn":"")+'"><div class="qt">'+E(q.zh)+'<span class="e">'+E(q.en)+'</span></div><div class="or">';
+if(q.t==="yn"){h+='<button class="ob'+(a==="yes"?" sl":"")+'" data-a="ans" data-q="'+q.id+'" data-v="yes">\u662F Yes</button><button class="ob'+(a==="no"?" sl":"")+'" data-a="ans" data-q="'+q.id+'" data-v="no">\u5426 No</button><button class="ob'+(a==="unsure"?" us":"")+'" data-a="ans" data-q="'+q.id+'" data-v="unsure">\u4E0D\u786E\u5B9A Not sure</button>'}
+else{for(var oi=0;oi<q.opts.length;oi++)h+='<button class="ob'+(a===q.opts[oi].zh?" sl":"")+'" data-a="ans" data-q="'+q.id+'" data-oi="'+oi+'">'+E(q.opts[oi].zh)+'<br><span style="font-size:10px;font-weight:400;opacity:.7">'+E(q.opts[oi].en)+"</span></button>";h+='<button class="ob'+(a==="unsure"?" us":"")+'" data-a="ans" data-q="'+q.id+'" data-v="unsure">\u4E0D\u786E\u5B9A<br><span style="font-size:10px;font-weight:400;opacity:.7">Not sure</span></button>'}
+h+="</div></div>"}}
+h+='<div class="nr">';if(cur>0)h+='<button class="nb np" data-a="prev">\u2190</button>';
+if(cur<3)h+='<button class="nb nn" data-a="next">\u2192</button>';else h+='<button class="nb nf" data-a="fin"'+(ad()?"":" disabled")+'>查看结果 Results</button>';
+h+="</div>";eM.innerHTML=h;window.scrollTo(0,0)}
+
+function showRes(){
+var h='<div class="rh"><h1>评估结果<span class="e"> Results</span></h1><p>学习模式画像 Learning Profile</p></div>';
+var rs=[];for(var i=0;i<D.length;i++){var s=gs(i),k=D[i].jg(s);rs.push({d:D[i],r:D[i].rs[k],k:k})}
+h+='<div class="sc" id="share-card"><div class="sc-t">学习模式画像 Learning Profile</div><div class="sc-s">青少年儿童学习模式评估 | Youth Learning Profile Assessment</div><div class="sc-g">';
+for(var i=0;i<rs.length;i++)h+='<div class="sc-i"><div class="sc-l">'+E(rs[i].d.zh)+" "+E(rs[i].d.en)+'</div><div class="sc-v" style="color:'+rs[i].r.cl+'">'+E(rs[i].r.zh)+" "+E(rs[i].r.en)+"</div></div>";
+h+='</div><div class="qr-res"><img src="'+QR_API+'" alt="QR"></div>';
+h+='<div class="sc-f">扫码或点击链接评估你孩子的学习模式</div><div class="sc-a">by 经常摸鱼的阿汤哥</div></div>';
+
+h+='<div class="share-guide"><div class="sg-title">📲 分享到朋友圈</div>';
+h+='<div class="sg-step">1. 长按上方卡片截图保存</div>';
+h+='<div class="sg-step">2. 打开微信 → 发现 → 朋友圈</div>';
+h+='<div class="sg-step">3. 发布截图，朋友扫码即可评估</div></div>';
+
+h+='<button class="share-btn" data-a="share">📲 截图上方卡片 → 分享到朋友圈</button>';
+h+='<button class="copy-btn" data-a="copylink">📋 复制链接发给朋友</button>';
+
+var driveKey=rs[0].k, stressKey=rs[1].k;
+if(driveKey==="i" && stressKey==="f"){
+h+='<div class="combo-box"><div class="combo-title">💡 组合解读 Combination Insight</div><div class="combo-text">您的孩子同时是内部驱动型和迎难型。这意味着：孩子需要有挑战性的学习内容，但不需要大量重复性作业来推动。最佳环境是\u201c课堂宽松但内容有深度\u201d\u2014\u2014给自由，但保证能接触到足够难的材料。<span class="e">Your child is both Self-Driven and a Challenger. They need challenging content but not heavy homework to push them. Best environment: relaxed structure + deep content.</span></div></div>';
+}
+if(driveKey==="e" && stressKey==="a"){
+h+='<div class="combo-box"><div class="combo-title">💡 组合解读 Combination Insight</div><div class="combo-text">您的孩子同时是外部驱动型和回避型。这意味着：孩子需要结构化的支持，但这个结构必须是温和的、鼓励性的，而不是高压的。选择耐心的老师比选择严格的老师更重要。<span class="e">Your child is both Structure-Driven and an Avoider. They need structured support, but it must be gentle and encouraging, not high-pressure.</span></div></div>';
+}
+if(driveKey==="i" && stressKey==="a"){
+h+='<div class="combo-box"><div class="combo-title">💡 组合解读 Combination Insight</div><div class="combo-text">您的孩子是内部驱动但回避型。这意味着：在感兴趣的领域孩子能自主探索，但遇到困难时容易放弃。关键是在孩子自驱的领域里，通过不断的小成功来逐步建立挫折耐受力。<span class="e">Self-Driven but Avoider: the child explores well in areas of interest but quits when things get hard. Build frustration tolerance through small successes.</span></div></div>';
+}
+
+for(var i=0;i<rs.length;i++){var r=rs[i];
+h+='<div class="rd"><div class="dh"><span class="dg" style="background:'+r.r.cl+'">'+E(r.d.zh)+'</span><span class="dp" style="color:'+r.r.cl+'">'+E(r.r.zh)+'<span class="e">'+E(r.r.en)+'</span></span></div><div class="dd">'+E(r.r.dzh)+'<span class="e">'+E(r.r.den)+'</span></div>';
+h+='<div class="st">策略 Strategies：</div>';for(var j=0;j<r.r.st.length;j++)h+='<div class="si">'+E(r.r.st[j].zh)+'<span class="e">'+E(r.r.st[j].en)+'</span></div>';
+h+='<div class="act-box"><div class="act-title">✅ 建议做 Recommended Actions：</div>';
+for(var j=0;j<r.r.yes.length;j++)h+='<div class="act-yes"><span class="icon">👉</span>'+E(r.r.yes[j].zh)+'<span class="e">'+E(r.r.yes[j].en)+'</span></div>';
+h+='<div class="act-title" style="margin-top:10px">❌ 避免做 Avoid：</div>';
+for(var j=0;j<r.r.no.length;j++)h+='<div class="act-no"><span class="icon">⛔</span>'+E(r.r.no[j].zh)+'<span class="e">'+E(r.r.no[j].en)+'</span></div>';
+h+='</div></div>'}
+h+='<div class="wb"><div class="wt">⚠️ 重要提醒 Notes</div><div class="wi">• 观察工具，不是人格测试 Observation tool, not personality test</div><div class="wi">• 建议每 6-12 月重新观察 Re-observe every 6-12 months</div><div class="wi">• 无好坏之分，只有匹配与否 No good/bad, only matched or not</div></div>';
+h+='<div class="ra"><button class="bo" data-a="back">修改 Edit</button><button class="nb nn" style="flex:1" data-a="reset">重新评估 Restart</button></div><div class="au">by 经常摸鱼的阿汤哥</div>';
+eR.innerHTML=h;sp("p2")}
+
+document.getElementById("go").addEventListener("click",function(){cur=0;render();sp("p1")});
+eM.addEventListener("click",function(e){var b=e.target;while(b&&b!==eM&&!b.getAttribute("data-a"))b=b.parentElement;if(!b||!b.getAttribute)return;var a=b.getAttribute("data-a");
+if(a==="tab"){cur=parseInt(b.getAttribute("data-i"));render()}
+else if(a==="ans"){var qid=b.getAttribute("data-q"),val=b.getAttribute("data-v");if(val)A[qid]=val;else{var oi=parseInt(b.getAttribute("data-oi")),q=fq(qid);if(q&&q.opts&&q.opts[oi])A[qid]=q.opts[oi].zh}render()}
+else if(a==="prev"){cur--;render()}else if(a==="next"){cur++;render()}else if(a==="fin"&&ad())showRes()});
+eR.addEventListener("click",function(e){var b=e.target;while(b&&b!==eR&&!b.getAttribute("data-a"))b=b.parentElement;if(!b||!b.getAttribute)return;var a=b.getAttribute("data-a");
+if(a==="back"){sp("p1");render()}else if(a==="reset"){A={};cur=0;sp("p0")}else if(a==="share"){toast("请截图上方卡片（含二维码），分享到朋友圈")}else if(a==="copylink"){
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(PAGE_URL).then(function(){toast("链接已复制！粘贴发送给朋友即可")}).catch(function(){toast("请手动复制: "+PAGE_URL)})}
+  else{var t=document.createElement("textarea");t.value=PAGE_URL;t.style.position="fixed";t.style.left="-9999px";document.body.appendChild(t);t.select();try{document.execCommand("copy");toast("链接已复制！粘贴发送给朋友即可")}catch(ex){toast("请手动复制: "+PAGE_URL)}document.body.removeChild(t)}
+}});
+})();
+</script>
+</body>
+</html>
