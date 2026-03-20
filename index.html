@@ -267,7 +267,7 @@ c:{zh:"社交讨论型",en:"Social-Discussion",cl:"#27AE60",dzh:"通过交流讨
 st:[{zh:"安排学习伙伴",en:"Arrange study partners"},{zh:"用教别人的方式学习",en:"Learn by teaching others"}],
 yes:[{zh:"安排固定的学习伙伴或学习小组",en:"Set up regular study partners or groups"},{zh:"报名小班制课程而非大班",en:"Choose small-class over large lectures"},{zh:"家长可以充当讨论对象，多和孩子聊学习内容",en:"Parents can be discussion partners"}],
 no:[{zh:"不要让孩子完全独自学习",en:"Don\u2019t isolate for solo study only"}]},
-x:{zh:"多通道均衡型",en:"Multi-Channel",cl:"#34495E",dzh:"可通过多种方式有效学习。",den:"Learns effectively through multiple channels.",
+x:{zh:"多通道均衡型",en:"Multi-Channel",cl:"#5DADE2",dzh:"可通过多种方式有效学习。",den:"Learns effectively through multiple channels.",
 st:[{zh:"让孩子自己选择学习方式",en:"Let the child choose"},{zh:"不同科目用不同通道",en:"Different channels for different subjects"}],
 yes:[{zh:"提供多样化学习工具（书、视频、实验、讨论机会）",en:"Offer diverse tools: books, videos, kits, discussion"},{zh:"鼓励孩子自己实验不同方法",en:"Encourage experimenting with methods"}],
 no:[{zh:"不要固定在单一学习模式上",en:"Don\u2019t lock into a single mode"}]}}},
@@ -326,7 +326,7 @@ else{for(var oi=0;oi<q.opts.length;oi++)h+='<button class="ob'+(a===q.opts[oi].z
 h+="</div></div>"}}
 h+='<div class="nr">';if(cur>0)h+='<button class="nb np" data-a="prev">\u2190</button>';
 if(cur<3)h+='<button class="nb nn" data-a="next">\u2192</button>';else h+='<button class="nb nf" data-a="fin"'+(ad()?"":" disabled")+'>查看结果 Results</button>';
-h+="</div>";eM.innerHTML=h;window.scrollTo(0,0)}
+h+="</div>";eM.innerHTML=h}
 
 function showRes(){
 var h='<div class="rh"><h1>评估结果<span class="e"> Results</span></h1><p>学习模式画像 Learning Profile</p></div>';
@@ -369,9 +369,9 @@ eR.innerHTML=h;sp("p2")}
 
 document.getElementById("go").addEventListener("click",function(){cur=0;render();sp("p1")});
 eM.addEventListener("click",function(e){var b=e.target;while(b&&b!==eM&&!b.getAttribute("data-a"))b=b.parentElement;if(!b||!b.getAttribute)return;var a=b.getAttribute("data-a");
-if(a==="tab"){cur=parseInt(b.getAttribute("data-i"));render()}
+if(a==="tab"){cur=parseInt(b.getAttribute("data-i"));render();window.scrollTo(0,0)}
 else if(a==="ans"){var qid=b.getAttribute("data-q"),val=b.getAttribute("data-v");if(val)A[qid]=val;else{var oi=parseInt(b.getAttribute("data-oi")),q=fq(qid);if(q&&q.opts&&q.opts[oi])A[qid]=q.opts[oi].zh}render()}
-else if(a==="prev"){cur--;render()}else if(a==="next"){cur++;render()}else if(a==="fin"&&ad())showRes()});
+else if(a==="prev"){cur--;render();window.scrollTo(0,0)}else if(a==="next"){cur++;render();window.scrollTo(0,0)}else if(a==="fin"&&ad())showRes()});
 eR.addEventListener("click",function(e){var b=e.target;while(b&&b!==eR&&!b.getAttribute("data-a"))b=b.parentElement;if(!b||!b.getAttribute)return;var a=b.getAttribute("data-a");
 if(a==="back"){sp("p1");render()}else if(a==="reset"){A={};cur=0;sp("p0")}else if(a==="share"){toast("请截图上方卡片（含二维码），分享到朋友圈")}else if(a==="copylink"){
   if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(PAGE_URL).then(function(){toast("链接已复制！粘贴发送给朋友即可")}).catch(function(){toast("请手动复制: "+PAGE_URL)})}
